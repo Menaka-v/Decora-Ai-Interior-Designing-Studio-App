@@ -123,6 +123,9 @@ npm run dev
 
 ## Author
 
+-- **Menaka V**
+-- `https://github.com/Menaka-v`
+-- 
 
 
 Open `http://localhost:3000` in your browser, and visit `/admin` to sign in to the Admin Panel.
