@@ -1,0 +1,141 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_decoraai",
+      "name": "Studio Admin",
+      "email": "admin@decoraai.com",
+      "passwordHash": "$2b$10$lUexFNlFsPvalU20WZMxj.7AASPrJj6.Yo260z5UyZjm7I44GQ8ae",
+      "role": "admin",
+      "preferredStyle": "modern",
+      "createdAt": "2026-10-31T06:40:56.583Z"
+    }
+  ],
+  "designs": [
+    {
+      "id": "seed-design-1",
+      "userId": null,
+      "title": "Sunlit Scandinavian Living Room",
+      "originalImage": "/src/assets/images/hero_before_living_1794631596061.jpg",
+      "generatedImages": [
+        {
+          "id": "seed-var-1",
+          "title": "Teal Velvet & Herringbone Oak",
+          "subtitle": "Warm sunlit Scandinavian transformation preserving window geometry",
+          "imageUrl": "/src/assets/images/hero_after_living_1794631596792.jpg",
+          "palette": [
+            "#F7F4EE",
+            "#0F5E66",
+            "#E86A58",
+            "#C68B3A"
+          ],
+          "highlights": [
+            "Deep teal velvet three-seater with coral cushions",
+            "Warm herringbone oak planks & woven jute rug",
+            "Sculptural brass arc floor lamp & indoor monstera"
+          ],
+          "estimatedCost": "$2,400 – $3,100",
+          "isLiveAiRender": false
+        }
+      ],
+      "selectedVariationIndex": 0,
+      "style": "Scandinavian",
+      "styleId": "scandinavian",
+      "roomType": "Living Room",
+      "customizations": {
+        "wallColor": "#F7F4EE",
+        "wallColorName": "Warm Alabaster",
+        "flooring": "Wood",
+        "furnitureStyle": "Curved Bouclé & Velvet",
+        "sofaBedColor": "#0F5E66",
+        "lightingMood": "Natural Daylight",
+        "decorAddons": [
+          "Plants",
+          "Rugs",
+          "Wall Art",
+          "Lamps"
+        ],
+        "budgetLevel": "Standard",
+        "extraInstructions": "Keep the right-side window uncluttered and add a reading lamp."
+      },
+      "tags": [
+        "Living Room",
+        "Teal Accent",
+        "Sunlit"
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-11-11T04:53:03.815Z"
+    },
+    {
+      "id": "seed-design-2",
+      "userId": null,
+      "title": "Serene Japandi Oak Bedroom",
+      "originalImage": "/src/assets/images/hero_before_living_1794631596061.jpg",
+      "generatedImages": [
+        {
+          "id": "seed-var-2",
+          "title": "Limewash Plaster & Ash Timber",
+          "subtitle": "Low-profile organic sanctuary with soft diffused daylight",
+          "imageUrl": "/src/assets/images/style_japandi_bedroom_1794631597258.jpg",
+          "palette": [
+            "#E8DFD1",
+            "#A65D3B",
+            "#D5C7B2",
+            "#5C6451"
+          ],
+          "highlights": [
+            "Low ash wood platform frame with terracotta linen",
+            "Handcrafted rice-paper pendant lantern",
+            "Textured limewash plaster walls & olive branch ceramic"
+          ],
+          "estimatedCost": "$1,850 – $2,400",
+          "isLiveAiRender": false
+        }
+      ],
+      "selectedVariationIndex": 0,
+      "style": "Japandi",
+      "styleId": "japandi",
+      "roomType": "Bedroom",
+      "customizations": {
+        "wallColor": "#E8DFD1",
+        "wallColorName": "Warm Limewash",
+        "flooring": "Wood",
+        "furnitureStyle": "Low Organic Timber",
+        "sofaBedColor": "#A65D3B",
+        "lightingMood": "Warm",
+        "decorAddons": [
+          "Plants",
+          "Curtains",
+          "Lamps"
+        ],
+        "budgetLevel": "Standard",
+        "extraInstructions": "Soft tactile linens and clutter-free bedside surfaces."
+      },
+      "tags": [
+        "Bedroom",
+        "Calm",
+        "Organic"
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-11-13T04:53:03.815Z"
+    }
+  ],
+  "consultations": [
+    {
+      "userId": null,
+      "designerId": "designer-ananya",
+      "designerName": "Ananya Verma",
+      "name": "Menaka V",
+      "email": "mithunamenaka26@gmail.com",
+      "phone": "7851216421",
+      "roomType": "Living Room",
+      "preferredDate": "2026-11-19",
+      "preferredTime": "01:30 PM",
+      "message": "to make it beautiful",
+      "id": "cns_1794632877572_6a6v7",
+      "status": "Confirmed",
+      "referenceCode": "DEC-NEH7J",
+      "createdAt": "2026-11-14T05:07:57.572Z"
+    }
+  ],
+  "seededAdminDefaults": true
+}
