@@ -10,7 +10,8 @@ DecoraAI is a 100% free, zero-API-key virtual interior design studio and design 
 
 ## Features
 
-- **100% Client-Side & Free (No API Keys):** Runs entirely in the browser with zero external paid AI image APIs or user keys.
+- **Supabase-powered booking and Admin Panel:** consultations saved to a real database, with a dashboard, status updates, and card managemen
+-  **100% Client-Side & Free (No API Keys):** Runs entirely in the browser with zero external paid AI image APIs or user keys.
 - **Upload Quality Checks & Auto-Resizing:** Checks brightness, resolution (`< 600px` wide), and sharpness (Laplacian variance) while auto-resizing large photos to max `1600px` on the long edge.
 - **Built-In Sample Rooms:** Instant `"Try sample room"` picker featuring well-lit Living Room, Bedroom, and Kitchen photos.
 - **In-Browser Room Region Segmentation:** Uses `Xenova/segformer-b0-finetuned-ade-512-512` via `@huggingface/transformers` to isolate walls, ceiling, floor, windows, doors, curtains, furniture, and rugs—plus **Brush**, **Eraser**, **Refine edges**, and **Magic Wand** flood-fill tools.
@@ -27,10 +28,10 @@ DecoraAI is a 100% free, zero-API-key virtual interior design studio and design 
 ## Tech Stack
 
 - **Frontend:** React 19, TypeScript, Tailwind CSS v4, Lucide Icons, Motion
+- **Database and Auth:** Supabase (PostgreSQL, Row Level Security)
 - **In-Browser ML:** `@huggingface/transformers` (`Xenova/segformer-b0-finetuned-ade-512-512`)
 - **Canvas & Graphics:** HTML5 Canvas 2D (`ImageData` HSL pipeline, procedural noise/veining textures, SVG-to-PNG compositor)
 - **Analytics & Visualization:** Recharts (`BarChart`, `PieChart`, `LineChart`), `localStorage` telemetry + CSV export
-- **Optional Backend:** Node.js, Express, MongoDB/Mongoose (with automatic local JSON store fallback for auth, saved designs, and consultations)
 
 ---
 
@@ -56,7 +57,7 @@ On your first visit to the **Design Studio**, `@huggingface/transformers` downlo
 - Shoot in bright, even natural daylight with curtains open and indoor lights balanced.
 - Stand back so at least one main wall and part of the floor are clearly visible.
 - Use **Refine edges** or the **Eraser** tool (`Mask: Walls`) if bright sunlight causes wall masks to touch window frames.
-- Click **Before / After** to verify architectural details stay untouched while paint, floor, and lighting change.
+- Drag **Before / After** to verify architectural details stay untouched while paint, floor, and lighting change.
 
 ---
 
@@ -119,5 +120,9 @@ All security enforcement lives in PostgreSQL RLS policies on Supabase:
 npm install
 npm run dev
 ```
+
+## Author
+
+
 
 Open `http://localhost:3000` in your browser, and visit `/admin` to sign in to the Admin Panel.
