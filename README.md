@@ -1,6 +1,6 @@
 # DecoraAI — Browser-Native Virtual Interior Design & Analytics Studio
 
-![DecoraAI Studio Preview](./docs/Decora ai studio demo.gif)
+![DecoraAI Studio Preview](./docs/studio-demo.gif)
 
 **Live Demo:** [https://decora-ai-interior-designing-studio.netlify.app/](https://decora-ai-interior-designing-studio.netlify.app/)
 
