@@ -2,7 +2,7 @@
 
 ![DecoraAI Studio Preview](./docs/studio-demo.gif)
 
-**Live Demo:** `https://decoraai-demo.example.com` *(replace with your deployed URL)*
+**Live Demo:** [https://decora-ai-interior-designing-studio.netlify.app/](https://decora-ai-interior-designing-studio.netlify.app/)
 
 DecoraAI is a 100% free, zero-API-key virtual interior design studio and design analytics dashboard. Upload any room photo (or launch with a built-in sample room), segment architectural regions directly inside the browser using `@huggingface/transformers`, repaint walls/ceilings/furniture with luminance-preserving HSL pixel processing, preview procedural perspective-scaled floors, arrange smart SVG decor overlays, and explore usage trends on an interactive Recharts dashboard.
 
@@ -10,8 +10,8 @@ DecoraAI is a 100% free, zero-API-key virtual interior design studio and design 
 
 ## Features
 
-- **Supabase-powered booking and Admin Panel:** consultations saved to a real database, with a dashboard, status updates, and card managemen
--  **100% Client-Side & Free (No API Keys):** Runs entirely in the browser with zero external paid AI image APIs or user keys.
+- **Supabase-powered booking and Admin Panel:** consultations saved to a real database, with a dashboard, status updates, and card management.
+- **100% Client-Side & Free (No API Keys):** Runs entirely in the browser with zero external paid AI image APIs or user keys.
 - **Upload Quality Checks & Auto-Resizing:** Checks brightness, resolution (`< 600px` wide), and sharpness (Laplacian variance) while auto-resizing large photos to max `1600px` on the long edge.
 - **Built-In Sample Rooms:** Instant `"Try sample room"` picker featuring well-lit Living Room, Bedroom, and Kitchen photos.
 - **In-Browser Room Region Segmentation:** Uses `Xenova/segformer-b0-finetuned-ade-512-512` via `@huggingface/transformers` to isolate walls, ceiling, floor, windows, doors, curtains, furniture, and rugs—plus **Brush**, **Eraser**, **Refine edges**, and **Magic Wand** flood-fill tools.
@@ -32,6 +32,7 @@ DecoraAI is a 100% free, zero-API-key virtual interior design studio and design 
 - **In-Browser ML:** `@huggingface/transformers` (`Xenova/segformer-b0-finetuned-ade-512-512`)
 - **Canvas & Graphics:** HTML5 Canvas 2D (`ImageData` HSL pipeline, procedural noise/veining textures, SVG-to-PNG compositor)
 - **Analytics & Visualization:** Recharts (`BarChart`, `PieChart`, `LineChart`), `localStorage` telemetry + CSV export
+- **Hosting:** Netlify
 
 ---
 
@@ -79,7 +80,7 @@ On your first visit to the **Design Studio**, `@huggingface/transformers` downlo
 
 ---
 
-## Supabase setup
+## Supabase Setup
 
 DecoraAI connects directly from the browser to Supabase using `@supabase/supabase-js` (`src/lib/supabaseClient.js`)—no custom backend server is required.
 
@@ -116,16 +117,35 @@ All security enforcement lives in PostgreSQL RLS policies on Supabase:
 
 ## Running Locally
 
+1. Clone the repository and install packages:
 ```bash
-npm install
-npm run dev
+   git clone https://github.com/Menaka-v/decora-ai-interior-designing-studio.git
+   cd decora-ai-interior-designing-studio
+   npm install
 ```
+2. Create a `.env` file by copying the example file:
+```bash
+   cp .env.example .env
+```
+3. Open `.env` and fill in your own Supabase values:
+```
+   VITE_SUPABASE_URL="https://your-project-ref.supabase.co"
+   VITE_SUPABASE_PUBLISHABLE_KEY="sb_publishable_your_key_here"
+```
+4. Start the app:
+```bash
+   npm run dev
+```
+5. Open http://localhost:3000 and visit `/admin` to sign in to the Admin Panel.
+
+---
 
 ## Author
 
--- **Menaka V**
--- `https://github.com/Menaka-v`
--- 
+**Menaka**
+Aspiring Data Analyst | Exploring GenAI tools
 
+- GitHub: [github.com/Menaka-v](https://github.com/Menaka-v)
+- LinkedIn: [linkedin.com/in/menaka-v-b68360315](https://www.linkedin.com/in/menaka-v-b68360315/)
 
-Open `http://localhost:3000` in your browser, and visit `/admin` to sign in to the Admin Panel.
+If you like this project, give it a ⭐ on GitHub!
